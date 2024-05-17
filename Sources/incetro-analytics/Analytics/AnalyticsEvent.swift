@@ -9,6 +9,7 @@ import Foundation
 
 // MARK: - AnalyticsEvent
 
+/// A protocol representing an analytics event.
 public protocol AnalyticsEvent: Equatable {
 
     /// The associated type for the metadata of the event.

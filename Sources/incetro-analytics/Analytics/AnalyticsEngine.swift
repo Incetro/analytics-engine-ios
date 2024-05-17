@@ -9,10 +9,13 @@ import Foundation
 
 // MARK: - AnalyticsEngine
 
+/// A protocol for an analytics engine that sends events to registered handlers.
 public protocol AnalyticsEngine {
     
-    /// Notifies the handler that an event has occurred.
+    /// Sends the specified analytics event.
     ///
-    /// - Parameter event: The analytics event that has occurred.
+    /// - Parameter event: The analytics event to be sent.
+    /// - Throws: An error if the event could not be sent.
     func send(event: any AnalyticsEvent) throws
 }
+
