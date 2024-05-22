@@ -1,5 +1,5 @@
 //
-//  AnalyticsEngine.swift
+//  AnalyticProvider.swift
 //
 //
 //  Created by Andrey Barsukov on 14.05.2024.
@@ -7,10 +7,10 @@
 
 import Foundation
 
-// MARK: - AnalyticsEngine
+// MARK: - AnalyticProvider
 
-/// A protocol for an analytics engine that sends events to registered handlers.
-public protocol AnalyticsEngine {
+/// A protocol for an analytics provideer that sends events to registered handlers.
+public protocol AnalyticProvider {
     
     /// Sends the specified analytics event.
     ///
