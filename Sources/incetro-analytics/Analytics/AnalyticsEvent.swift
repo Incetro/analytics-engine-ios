@@ -5,8 +5,6 @@
 //  Created by Andrey Barsukov on 16.05.2024.
 //
 
-<<<<<<< ours
-=======
 import Foundation
 
 // MARK: - AnalyticsEvent
@@ -23,4 +21,3 @@ public protocol AnalyticsEvent: Equatable {
     /// The associated metadata for the event.
     var metadata: Metadata { get }
 }
->>>>>>> theirs

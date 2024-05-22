@@ -5,8 +5,6 @@
 //  Created by Andrey Barsukov on 14.05.2024.
 //
 
-<<<<<<< ours
-=======
 import Foundation
 
 // MARK: - AnalyticsEngineImplementation
@@ -45,5 +43,3 @@ extension AnalyticsEngineImplementation {
         }
     }
 }
-
->>>>>>> theirs
