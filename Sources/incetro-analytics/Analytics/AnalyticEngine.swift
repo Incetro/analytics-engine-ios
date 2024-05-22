@@ -37,9 +37,12 @@ extension AnalyticEngine {
         do {
             try providers.forEach { provider in
                 try provider.send(event: event)
+#if DEBUG
+print("send event (event.rawValue) for (provider.rawValue)")
+#endif
             }
         } catch {
-            print("Unknown error '\(error.localizedDescription)'")
+            
         }
     }
 }
