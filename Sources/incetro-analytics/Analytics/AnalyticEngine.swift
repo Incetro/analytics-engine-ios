@@ -11,13 +11,15 @@ import Foundation
 
 public final class AnalyticEngine {
     
-    // MARK: - Properties
+    // MARK: - DebugMode
     
     /// An enumeration representing the debug mode for logging.
     public enum DebugMode {
         case debug
         case normal
     }
+    
+    // MARK: - Properties
     
     /// The analytics providers that the system can use to send events.
     private let providers: [any AnalyticProvider]
