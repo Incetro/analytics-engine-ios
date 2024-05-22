@@ -13,20 +13,17 @@ public final class AnalyticEngine {
     
     // MARK: - Properties
     
+    /// An enumeration representing the debug mode for logging.
+    public enum DebugMode {
+        case debug
+        case normal
+    }
+    
     /// The analytics providers that the system can use to send events.
     private let providers: [any AnalyticProvider]
     
     /// The mode of operation for logging.
     private let mode: DebugMode
-    
-    // MARK: - DebugMode
-
-    /// An enumeration representing the debug mode for logging.
-    /// здесь нельзя использовать private инициализатор начнет ругаться, так как он public
-    public enum DebugMode {
-        case debug
-        case normal
-    }
 
     // MARK: - Initializers
     
