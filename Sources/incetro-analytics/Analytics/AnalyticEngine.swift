@@ -18,6 +18,15 @@ public final class AnalyticEngine {
     
     /// The mode of operation for logging.
     private let mode: DebugMode
+    
+    // MARK: - DebugMode
+
+    /// An enumeration representing the debug mode for logging.
+    /// здесь нельзя использовать private инициализатор начнет ругаться, так как он public
+    public enum DebugMode {
+        case debug
+        case normal
+    }
 
     // MARK: - Initializers
     
@@ -43,19 +52,9 @@ extension AnalyticEngine {
                 try provider.send(event: event)
                 // Conditionally print debug message based on mode
                 if mode == .debug {
-                    print("send event \(event.rawValue) for \(provider.rawValue)")
-                    /// Errors: Value of type 'any AnalyticProvider' has no member 'rawValue'
-                    /// Value of type 'any AnalyticsEvent' has no member 'rawValue'
+                    print("send event \(event.name) for \(provider) with \(event.metadata)")
                 }
             }
         }
     }
-}
-
-// MARK: - DebugMode
-
-/// An enumeration representing the debug mode for logging.
-public enum DebugMode {
-    case debug
-    case normal
 }
