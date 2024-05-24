@@ -17,7 +17,7 @@ let package = Package(
         .target(
             name: "AnalyticsEngine"),
         .testTarget(
-            name: "AnalyticsEngine",
+            name: "AnalyticsEngineTest",
             dependencies: ["AnalyticsEngine"]),
     ]
 )
