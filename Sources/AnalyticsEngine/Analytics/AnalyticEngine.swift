@@ -46,13 +46,11 @@ extension AnalyticEngine {
     ///
     /// - Parameter event: The analytics event to be sent.
     public func send(event: any AnalyticsEvent) throws {
-        do {
-            try providers.forEach { provider in
-                try provider.send(event: event)
-                // Conditionally print debug message based on mode
-                if mode == .debug {
-                    print("send event \(event.name) for \(provider) with \(event.metadata)")
-                }
+        try providers.forEach { provider in
+            try provider.send(event: event)
+            // Conditionally print debug message based on mode
+            if mode == .debug {
+                print("send event \(event.name) for \(provider) with \(event.metadata)")
             }
         }
     }
