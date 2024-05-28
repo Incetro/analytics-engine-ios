@@ -1,5 +1,5 @@
 //
-//  AnalyticEngine.swift
+//  AnalyticsEngine.swift
 //
 //
 //  Created by Andrey Barsukov on 14.05.2024.
@@ -7,9 +7,9 @@
 
 import Foundation
 
-// MARK: - AnalyticEngine
+// MARK: - AnalyticsEngine
 
-public final class AnalyticEngine {
+public final class AnalyticsEngine {
     
     // MARK: - DebugMode
     
@@ -22,7 +22,7 @@ public final class AnalyticEngine {
     // MARK: - Properties
     
     /// The analytics providers that the system can use to send events.
-    private let providers: [any AnalyticProvider]
+    private let providers: [any AnalyticsProvider]
     
     /// The mode of operation for logging.
     private let mode: DebugMode
@@ -32,15 +32,15 @@ public final class AnalyticEngine {
     /// Initializes the analytics engine with the provided providers.
     ///
     /// - Parameter providers: The providers to be registered with the implementation.
-    public init(providers: [any AnalyticProvider], mode: DebugMode) {
+    public init(providers: [any AnalyticsProvider], mode: DebugMode) {
         self.providers = providers
         self.mode = mode
     }
 }
 
-extension AnalyticEngine {
+extension AnalyticsEngine {
     
-    // MARK: - AnalyticEngine
+    // MARK: - AnalyticsEngine
     
     /// Sends an analytics event to all configured analytics providers.
     ///

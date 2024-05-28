@@ -1,5 +1,5 @@
 //
-//  AnalyticProvider.swift
+//  AnalyticsProvider.swift
 //
 //
 //  Created by Andrey Barsukov on 14.05.2024.
@@ -7,10 +7,10 @@
 
 import Foundation
 
-// MARK: - AnalyticProvider
+// MARK: - AnalyticsProvider
 
 /// A protocol for an analytics provideer that sends events to registered handlers.
-public protocol AnalyticProvider {
+public protocol AnalyticsProvider {
     
     /// Sends the specified analytics event.
     ///
